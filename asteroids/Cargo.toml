@@ -1,0 +1,19 @@
+[workspace]
+resolver = "2"
+
+members = [
+    "contracts/solution"
+]
+
+[workspace.dependencies.soroban-sdk]
+version = "0.6.0"
+
+[profile.release]
+opt-level = "s"
+overflow-checks = true
+debug = 0
+strip = "symbols"
+debug-assertions = false
+panic = "abort"
+codegen-units = 1
+lto = true
